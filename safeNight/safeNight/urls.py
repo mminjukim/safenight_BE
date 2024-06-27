@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')), # accounts의 url을 등록 
+    path('', include('diary.urls')),
+    path('', include('consultLogs.urls')),
 ]

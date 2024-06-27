@@ -1,12 +1,12 @@
 from rest_framework.routers import SimpleRouter 
 from django.urls import path, include
-from .views import ConsultLogsViewSet
+from .views import ConsultLogViewSet
 
 
-consultlogs_router = SimpleRouter(trailing_slash=False)
-consultlogs_router.register('consultLogs', ConsultLogsViewSet, basename='consultLog') 
+consultlog_router = SimpleRouter(trailing_slash=False)
+consultlog_router.register('consultLog', ConsultLogViewSet, basename='consultLog') 
 
 
 urlpatterns = [
-    path('', include(consultlogs_router.urls)),
+    path('', include(consultlog_router.urls)),
 ]

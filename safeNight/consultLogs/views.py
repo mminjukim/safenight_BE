@@ -1,10 +1,7 @@
-from .models import ConsultLogs
-from .serializers import ConsultLogsSerializer
+from .models import ConsultLog
+from .serializers import ConsultLogSerializer
 from rest_framework.viewsets import ModelViewSet 
 
-class ConsultLogsViewSet(ModelViewSet):
-    queryset = ConsultLogs.objects.all()
-    serializer_class = ConsultLogsSerializer
-
-    def perform_create(self, serializer):
-        serializer.save(doctor = self.request.user)
+class ConsultLogViewSet(ModelViewSet):
+    queryset = ConsultLog.objects.all()
+    serializer_class = ConsultLogSerializer

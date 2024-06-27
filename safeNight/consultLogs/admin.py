@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import ConsultLogs
+from .models import ConsultLog
 
-admin.site.register(ConsultLogs)
+admin.site.register(ConsultLog)

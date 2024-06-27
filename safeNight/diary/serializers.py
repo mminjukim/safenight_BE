@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 class DiarySerializer(ModelSerializer):
-    date = serializers.DateTimeField(format="%Y.%m.%d %a")
+    date = serializers.DateField(format="%Y.%m.%d %a")
     class Meta:
         model = Diary
         fields = ['diaryId', 'date', 'content']

@@ -28,6 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# 유저 모델 확장
+
+AUTH_USER_MODEL = 'accounts.User'
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
